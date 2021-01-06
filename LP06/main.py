@@ -1,4 +1,7 @@
 import json
+from datetime import datetime # datetime object containing current date and time
+now = datetime.now()
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S") # dd/mm/YY H:M:S
 provinces = {
     "1"  : "กรุงเทพมหานคร",
     "2"  : "จังหวัดกาญจนบุรี",
