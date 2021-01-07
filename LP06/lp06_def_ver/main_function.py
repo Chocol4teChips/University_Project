@@ -20,7 +20,6 @@ def getUserInfo():
     persondict.update({"age" : int(input("Enter age : "))})
     persondict.update({"body_temp" : float(input("Enter temperature : "))})
 
-
 provinces = {
     "1"  : "Bangkok",
     "2"  : "Kanchanaburi",
