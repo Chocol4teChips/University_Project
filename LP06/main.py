@@ -3,35 +3,35 @@ from datetime import datetime # datetime object containing current date and time
 now = datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S") # dd/mm/YY H:M:S
 provinces = {
-    "1"  : "กรุงเทพมหานคร",
-    "2"  : "จังหวัดกาญจนบุรี",
-    "3"  : "จังหวัดจันทบุรี",
-    "4"  : "จังหวัดฉะเฉิงเทรา",
-    "5"  : "จังหวัดชุมพร",
-    "6"  : "จังหวัดชุมพร",
-    "7"  : "จังหวัดชลบุรี",
-    "8"  : "จังหวัดตราด",
-    "9"  : "จังหวัดตาก",
-    "10" : "จังหวัดนครนายก",
-    "11" : "จังหวัดนครปฐม",
-    "12" : "จังหวัดนนทบุรี",
-    "13" : "จังหวัดปทุมธานี",
-    "14" : "จังหวัดปราจีนบุรี",
-    "15" : "จังหวัดพระนครศรีอยุธยา",
-    "16" : "จังหวัดเพชรบุรี",
-    "17" : "จังหวัดราชบุรี",
-    "18" : "จังหวัดระนอง",
-    "19" : "จังหวัดระยอง",
-    "20" : "จังหวัดลพบุรี",
-    "21" : "จังหวัดสิงห์บุรี",
-    "22" : "จังหวัดสมุทรปราการ",
-    "23" : "จังหวัดสมุทรสงคราม",
-    "24" : "จังหวัดสมุทรสาคร",
-    "25" : "จังหวัดสุพรรณบุรี",
-    "26" : "จังหวัดสระแก้ว",
-    "27" : "จังหวัดสระบุรี",
-    "28" : "จังหวัดอ่างทอง",
-    "0"  : "อื่นๆ"
+    "1"  : "Bangkok",
+    "2"  : "Kanchanaburi",
+    "3"  : "Chanthanaburi",
+    "4"  : "Chachoengsao",
+    "5"  : "Chumphone",
+    "6"  : "Chonburi",
+    "7"  : "trat",
+    "8"  : "Tak",
+    "9"  : "Nakhon Nayok",
+    "10" : "Nakhon Pathom",
+    "11" : "Nonthaburi",
+    "12" : "Pathum Thani",
+    "13" : "Prachuap Khiri Khan",
+    "14" : "Prachinburi",
+    "15" : "Ayutthaya",
+    "16" : "Phetchinburi",
+    "17" : "Ratchaburi",
+    "18" : "Ranong",
+    "19" : "Rayong",
+    "20" : "Lopburi",
+    "21" : "Singburi",
+    "22" : "Samut Prakn",
+    "23" : "Samut Songkhram",
+    "24" : "Samut Sakhon",
+    "25" : "Suphanburi",
+    "26" : "Sa Kaeo",
+    "27" : "Saraburi",
+    "28" : "Ang Thong",
+    "0"  : "other"
 }
 
 persondict = {
@@ -51,7 +51,7 @@ persondict.update({"location":int(input("Enter location number : "))})
 
 if persondict.get("location") == 0:
     persondict.update({"risk":False})
-elif str(persondict.get("location")) in provinces.keys() and persondict.get("body_temp") > 37.5 and  persondict.get("body_temp") != 0:
+elif str(persondict.get("location")) in provinces.keys() and persondict.get("body_temp") > 37.5 and  persondict.get("provinces") != 0:
     persondict.update({"covid":True})
 elif str(persondict.get("location")) in provinces.keys():
     persondict.update({"risk":True})
