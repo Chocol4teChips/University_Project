@@ -58,6 +58,5 @@ elif str(persondict.get("location")) in provinces.keys():
 if persondict.get("body_temp") > 37.5:
     persondict.update({"risk":True})
 
-
 x = json.dumps(persondict)
 print("{}".format(json.dumps(persondict)))
